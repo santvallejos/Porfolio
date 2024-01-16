@@ -1,0 +1,14 @@
+#   Creación del proyecto en Astro de forma manual.
+
+#   Agregamos tailwind al proyecto con el comando: npx astro add tailwind.
+
+#   Codificación del Header como componente en components para ser llamado por el Layout.
+        Header:
+                Imagen mía y un nav para la navegación de la página
+                con distintos links.
+
+#  	Agregamos Dark y light mode
+
+# 	Agregamos la fuente del proyecto, instalando la misma y llamándola en el html
+
+#   Realizamos la presentación del usuario en el porfolio  

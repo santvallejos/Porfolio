@@ -1,17 +1,18 @@
 ---
-// ¡Bienvenido a Astro! Todo entre los guiones triples son los
-// "metadatos de tu componente". Nunca se ejecuta en el navegador.
-console.log('¡Esto se ejecuta en tu terminal y no en el navegador!');
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
 ---
-<!-- El código de abajo es "la plantilla de su componente". Es solo HTML
-      con un poco de magia que te ayudará a crear la plantilla del componente. -->
-<html>
-  <body>
-    <h1>¡Hola Mundo!</h1>
-  </body>
-</html>
-<style>
-  h1 {
-    color: orange;
-  }
-</style>
+
+<Layout title="Santiago Vallejos">
+
+  <!-- Presentacion del usuario -->
+  <section class="">
+    <main>
+      <h1>Hey, soy Santiago <Badge>Disponible para trabajar</Badge></h1>
+      <h2>Programador Full Stack. De Corrientes, Argentina 🧉. Me epecializo en crear aplicaciones únicas</h2>
+
+
+    </main>
+  </section>
+
+</Layout>
