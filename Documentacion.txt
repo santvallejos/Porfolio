@@ -11,4 +11,10 @@
 
 # 	Agregamos la fuente del proyecto, instalando la misma y llamándola en el html
 
-#   Realizamos la presentación del usuario en el porfolio  
+#   Realizamos la presentación del usuario en el porfolio 
+
+#   Codificación del componente Badges
+
+#   Reacomodamiento del Header y la foto
+
+#   Copiamos un estilo para el fondo del proyecto, Link: https://bg.ibelick.com
