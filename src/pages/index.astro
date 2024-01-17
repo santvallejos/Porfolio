@@ -1,20 +1,53 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
+  import Layout from '../layouts/Layout.astro';
+  import Badge from '../components/Badge.astro';
+  import LinkedinIcon from '../components/icons/LinkedinIcon.astro';
+  import GithubIcon from '../components/icons/GithubIcon.astro';
+  import MailIcon from '../components/icons/MailIcon.astro';
+  import CV from '../components/icons/CVIcon.astro';
+  import SocialPill from '../components/SocialPill.astro';
 ---
 
-<Layout title="Santiago Vallejos">
+<Layout title="Portfolio de Satiago Vallejos - Desarrollador y Programador Web" description="Contrata a Santiago Vallejos para la creacion de tus apliaciones web. Programador Full Stack. Me epecializo en crear aplicaciones únicas.">
 
   <!-- Presentacion del usuario -->
-  <section class="w-full mx-auto lg:w-[740px] py-44 fondo">
+  <section class="w-full mx-auto lg:w-[740px] py-44">
     <main>
-      <img class="rounded-full w-20 h-20" src="../SantiagoPhoto(circulo).png" alt="Santiago photo">
+      <img class="rounded-full size-20" src="../SantiagoPhotoColor.png" alt="Santiago photo">
+      
       <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4"
-      >Hey, soy Santiago <a href="" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a> </h1>
+      >Hey, soy Santiago <a href="https://www.linkedin.com/in/santiago-vallejos-97a933236/" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a> </h1>
+      
       <h2 class="text-xl opacity-80"
-      >Programador Full Stack. De Corrientes, Argentina 🧉. Me epecializo en crear aplicaciones únicas</h2>
+      > Soy <span class="text-yellow-200/90">Programador Full Stack</span>. <span class="text-sky-200/90">De Corrientes, Argentina🧉</span>.</h2>
+      
+      <h2 class="text-xl opacity-75"
+      >Me especializo en crear aplicaciones únicas.</h2>
 
+      <!-- Contactos -->
+      <nav class="flex gap-x-5 mt-7">
 
+        <SocialPill href="https://www.linkedin.com/in/santiago-vallejos-97a933236/">
+          <LinkedinIcon class="size-8" />
+          LinkedIn
+        </SocialPill>
+
+        <SocialPill href="https://github.com/santvallejos">
+          <GithubIcon class="size-8" />
+          Github
+        </SocialPill>
+
+        <SocialPill>
+          <MailIcon class="size-8" />
+          vallejossantiago1412@gmail.com
+        </SocialPill>
+      </nav>
+      <nav class="flex gap-x-4 mt-4">
+        <SocialPill href="/SantiagoVallejosCV.pdf" download>
+          <CV class="size-8" />
+          Descargar CV
+        </SocialPill>
+      </nav>
     </main>
   </section>
 
