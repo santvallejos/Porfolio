@@ -36,6 +36,7 @@ const { description, title } = Astro.props;
 
     html{
         font-family: 'Onest Variable', sans-serif;
+        scroll-behavior: smooth;
     }
 
     body{
@@ -43,5 +44,12 @@ const { description, title } = Astro.props;
         display: flex;
         flex-direction: column;
         height: 100vh;
+        overflow-x: hidden;
+    }
+
+    @media(prefers-reduced-motion: reduce){
+        html{
+            scroll-behavior: auto;
+        }
     }
 </style>

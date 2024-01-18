@@ -18,3 +18,12 @@
 #   Reacomodamiento del Header y la foto
 
 #   Copiamos un estilo para el fondo del proyecto, Link: https://bg.ibelick.com
+
+#   Colamos Los distintos datos de contacto como: Linkedin, Github, Mail y agregamos para descargar nuestro CV.
+    Los Iconos los sacamos de https://tabler.io/icons
+    Y trabajamos de una manera en la cual separamos el icono y una SocialPill, para una estructura más limpia del código.
+
+#   Creación de la Sección Sobre-mi
+    Ampliación de una presentación del usuario
+    Una lista de la Educación que posee dividiendo en componentes los estudios que tiene certificado y cuales no
+    Y por último una lista de las tecnologías que se tiene conocimiento 

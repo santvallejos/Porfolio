@@ -1,17 +1,21 @@
 ---
   import Layout from '../layouts/Layout.astro';
   import Badge from '../components/Badge.astro';
+  import SectionContainer from '../components/SectionContainer.astro'
   import LinkedinIcon from '../components/icons/LinkedinIcon.astro';
   import GithubIcon from '../components/icons/GithubIcon.astro';
   import MailIcon from '../components/icons/MailIcon.astro';
   import CV from '../components/icons/CVIcon.astro';
   import SocialPill from '../components/SocialPill.astro';
+  import Technologie from '../components/Technologie.astro';
+  import Education from '../components/Education.astro';
+  import EducationLink from '../components/EducationLink.astro';
 ---
 
 <Layout title="Portfolio de Satiago Vallejos - Desarrollador y Programador Web" description="Contrata a Santiago Vallejos para la creacion de tus apliaciones web. Programador Full Stack. Me epecializo en crear aplicaciones únicas.">
 
   <!-- Presentacion del usuario -->
-  <section class="w-full mx-auto lg:w-[740px] py-44">
+  <SectionContainer class="py-44 pb-24">
     <main>
       <img class="rounded-full size-20" src="../SantiagoPhotoColor.png" alt="Santiago photo">
       
@@ -47,8 +51,71 @@
           <CV class="size-8" />
           Descargar CV
         </SocialPill>
+
       </nav>
+
     </main>
-  </section>
+  </SectionContainer>
+
+  <SectionContainer class="pb-24" id="sobre-mi">
+    <!-- Sobre mi -->
+      <div class="flex flex-col gap-12 max-w-custom pt-20 pb-20">
+        <div class="flex flex-col gap-3">
+          <h2 class="text-4xl text-left">
+            Sobre mí.
+          </h2>
+          <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+        <!-- Educacion -->
+        <div class="flex flex-col gap-3">
+          <h3 class="text-left text-2xl font-medium">
+            Educación:
+          </h3>
+          <ul class="marker:text-primary list-disc text-lg flex flex-wrap flex-row gap-5 lg:flex-col lg:gap-4">
+            <Education Estudio="Licenciatura en Sistemas de la Información" Institucion='Universidad nacional del nordeste (UNNE)' fecha='2022 - presente'/>
+            <Education Estudio="Talentos Digitales" Institucion='Programa de formación' fecha='2023 - Presente'/>
+            <EducationLink Estudio="Desarrollador Web" Institucion='CoderHouse - ' fecha='2023'/>
+          </ul>
+        </div>
+
+        <!-- Lista de tegnologias -->
+        <div class="flex flex-col gap-5">
+          <h3 class="text-left text-2xl font-medium">
+            Tecnologías:
+          </h3>
+          <ul class="flex flex-wrap gap-6">
+            <Technologie Src="/html-52732337.svg" Name="HTML" />
+
+            <Technologie Src='/css-8e01670c.svg' Name='CSS' />
+
+            <Technologie Src="/javascript-0ac5e3cc.svg" Name="JavaScript" />
+
+            <Technologie Src="/react-9fe43511.svg" Name="React" />
+
+            <Technologie Src="/astro-svgrepo-com.svg" Name="Astro" />
+
+            <Technologie Src="/sass-svgrepo-com.svg" Name="Sass" />
+
+            <Technologie Src="/tailwind-2a43431b.svg" Name="Tailwind"' />
+
+            <Technologie Src="/php3-svgrepo-com.svg" Name="PHP" />
+
+            <Technologie Src="/c-1.svg" Name="C" />
+
+            <Technologie Src="/c.svg" Name="C++" />
+
+            <Technologie Src="/mysql-logo-svgrepo-com.svg" Name="MySQL" />
+
+            <Technologie Src="/git-3f0b1bae.svg" Name="Git" />
+
+            <Technologie Src="/brand-github-filled.svg" Name="Github" />
+
+            <Technologie Src="/jira-svgrepo-com.svg" Name="Jira" />
+          </ul>
+        </div>
+  
+      </div>
+    </SectionContainer>
 
 </Layout>

@@ -1,0 +1,15 @@
+---
+interface Props {
+    Estudio: string;
+    Institucion: string;
+    fecha: string;
+}
+
+const { Estudio, Institucion, fecha} = Astro.props;
+---
+
+    <li class="ml-5">{Estudio}</li>
+    <span class="italic opacity-60 text-base block">
+    {Institucion}
+    <span class="block">{fecha}</span>
+    </span>
