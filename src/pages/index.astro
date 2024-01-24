@@ -1,70 +1,73 @@
 ---
   import Layout from '../layouts/Layout.astro';
   import Badge from '../components/Badge.astro';
+  import BadgeAnimation from '../components/BadgeAnimation.astro';
   import SectionContainer from '../components/SectionContainer.astro'
   import LinkedinIcon from '../components/icons/LinkedinIcon.astro';
   import GithubIcon from '../components/icons/GithubIcon.astro';
   import MailIcon from '../components/icons/MailIcon.astro';
   import CV from '../components/icons/CVIcon.astro';
-  import SocialPill from '../components/SocialPill.astro';
+  import LinkButton from '../components/LinkButton.astro';
   import Technologie from '../components/Technologie.astro';
   import Education from '../components/Education.astro';
   import EducationLink from '../components/EducationLink.astro';
+  import CodeIcon from '../components/icons/Code.astro';
+  import Projects from '../components/Projects.astro';
+  import AboutMe from '../components/AboutMe.astro';
 ---
 
 <Layout title="Portfolio de Satiago Vallejos - Desarrollador y Programador Web" description="Contrata a Santiago Vallejos para la creacion de tus apliaciones web. Programador Full Stack. Me epecializo en crear aplicaciones únicas.">
 
   <!-- Presentacion del usuario -->
-  <SectionContainer class="py-44 pb-24">
-    <main>
+  <SectionContainer id="contacto" class="py-44 pb-24">
+    <main class="px-3">
       <img class="rounded-full size-20" src="../SantiagoPhotoColor.png" alt="Santiago photo">
       
-      <h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4"
-      >Hey, soy Santiago <a href="https://www.linkedin.com/in/santiago-vallejos-97a933236/" class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></a> </h1>
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >Hey, soy Santiago <a href="https://www.linkedin.com/in/santiago-vallejos-97a933236/" class="flex justify-center items-center"><BadgeAnimation>Disponible para trabajar</BadgeAnimation></a> </h1>
       
-      <h2 class="text-xl opacity-80"
-      > Soy <span class="text-yellow-200/90">Programador Full Stack</span>. <span class="text-sky-200/90">De Corrientes, Argentina🧉</span>.</h2>
-      
-      <h2 class="text-xl opacity-75"
-      >Me especializo en crear aplicaciones únicas.</h2>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"
+      > Soy <span class="text-yellow-200/90">Programador Full Stack</span>. <span class="text-sky-200/90">De Corrientes, Argentina🧉</span>. <br>
+      <span class="opacity-75"> Me especializo en crear aplicaciones únicas.</span>
+      </h2>
 
       <!-- Contactos -->
-      <nav class="flex gap-x-5 mt-7">
+      <nav class="flex gap-4 mt-8 flex-wrap">
 
-        <SocialPill href="https://www.linkedin.com/in/santiago-vallejos-97a933236/">
-          <LinkedinIcon class="size-8" />
+        <LinkButton href="https://www.linkedin.com/in/santiago-vallejos-97a933236/">
+          <LinkedinIcon class="size-4 md:size-6" />
           LinkedIn
-        </SocialPill>
+        </LinkButton>
 
-        <SocialPill href="https://github.com/santvallejos">
-          <GithubIcon class="size-8" />
+        <LinkButton href="https://github.com/santvallejos">
+          <GithubIcon class="size-4 md:size-6" />
           Github
-        </SocialPill>
+        </LinkButton>
 
-        <SocialPill>
-          <MailIcon class="size-8" />
+        <LinkButton href="mailto:vallejossantiago1412@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
           vallejossantiago1412@gmail.com
-        </SocialPill>
+        </LinkButton>
       </nav>
       <nav class="flex gap-x-4 mt-4">
-        <SocialPill href="/SantiagoVallejosCV.pdf" download>
-          <CV class="size-8" />
+        <LinkButton href="/SantiagoVallejosCV.pdf" download>
+          <CV class="size-4 md:size-6" />
           Descargar CV
-        </SocialPill>
+        </LinkButton>
 
       </nav>
 
     </main>
   </SectionContainer>
 
-  <SectionContainer class="pb-24" id="sobre-mi">
-    <!-- Sobre mi -->
+  <!-- Sobre mi -->
+  <SectionContainer class="px-3 pb-2" id="sobre-mi">
       <div class="flex flex-col gap-12 max-w-custom pt-20 pb-20">
         <div class="flex flex-col gap-3">
           <h2 class="text-4xl text-left">
-            Sobre mí.
+            Sobre mí
           </h2>
-          <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <AboutMe />
         </div>
 
         <!-- Educacion -->
@@ -84,38 +87,49 @@
           <h3 class="text-left text-2xl font-medium">
             Tecnologías:
           </h3>
+          <div class="lg:w-[740px] mx-auto">
           <ul class="flex flex-wrap gap-6">
-            <Technologie Src="/html-52732337.svg" Name="HTML" />
+            <Technologie Src="/icons/html-52732337.svg" Name="HTML" />
 
-            <Technologie Src='/css-8e01670c.svg' Name='CSS' />
+            <Technologie Src='/icons/css-8e01670c.svg' Name='CSS' />
 
-            <Technologie Src="/javascript-0ac5e3cc.svg" Name="JavaScript" />
+            <Technologie Src="/icons/javascript-0ac5e3cc.svg" Name="JavaScript" />
 
-            <Technologie Src="/react-9fe43511.svg" Name="React" />
+            <Technologie Src="/icons/react-9fe43511.svg" Name="React" />
 
-            <Technologie Src="/astro-svgrepo-com.svg" Name="Astro" />
+            <Technologie Src="/icons/codeigniter.svg" Name="Codeigniter" />
 
-            <Technologie Src="/sass-svgrepo-com.svg" Name="Sass" />
+            <Technologie  Src="/icons/astro-svgrepo-com.svg" Name="Astro" />
 
-            <Technologie Src="/tailwind-2a43431b.svg" Name="Tailwind"' />
+            <Technologie Src="/icons/sass-svgrepo-com.svg" Name="Sass" />
 
-            <Technologie Src="/php3-svgrepo-com.svg" Name="PHP" />
+            <Technologie Src="/icons/tailwind-2a43431b.svg" Name="Tailwind"' />
 
-            <Technologie Src="/c-1.svg" Name="C" />
+            <Technologie Src="/icons/php3-svgrepo-com.svg" Name="PHP" />
 
-            <Technologie Src="/c.svg" Name="C++" />
+            <Technologie Src="/icons/c-1.svg" Name="C" />
 
-            <Technologie Src="/mysql-logo-svgrepo-com.svg" Name="MySQL" />
+            <Technologie Src="/icons/c.svg" Name="C++" />
 
-            <Technologie Src="/git-3f0b1bae.svg" Name="Git" />
+            <Technologie Src="/icons/mysql-logo-svgrepo-com.svg" Name="MySQL" />
 
-            <Technologie Src="/brand-github-filled.svg" Name="Github" />
+            <Technologie Src="/icons/git-3f0b1bae.svg" Name="Git" />
 
-            <Technologie Src="/jira-svgrepo-com.svg" Name="Jira" />
+            <Technologie Src="/icons/brand-github-filled.svg" Name="Github" />
+
+            <Technologie Src="/icons/jira-svgrepo-com.svg" Name="Jira" />
           </ul>
+        </div>
         </div>
   
       </div>
     </SectionContainer>
 
+  <SectionContainer class="px-3 pb-20" id="proyectos">
+    <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+      <CodeIcon class="size-7" />
+      Proyectos
+    </h2>
+    <Projects />
+  </SectionConteiner>
 </Layout>

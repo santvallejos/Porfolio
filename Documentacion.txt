@@ -26,4 +26,13 @@
 #   Creación de la Sección Sobre-mi
     Ampliación de una presentación del usuario
     Una lista de la Educación que posee dividiendo en componentes los estudios que tiene certificado y cuales no
-    Y por último una lista de las tecnologías que se tiene conocimiento 
+    Y por último una lista de las tecnologías que se tiene conocimiento
+
+#   Creación de Proyects
+    Realizamos dos array donde colocamos los ítems que posee cada distinto proyecto y otro en donde se encuentra el proyecto,
+    Ya que cada uno tendrá un título, breve descripción, sus respectivos links además de los TAGS que posea. 
+
+#   Colamos un Footer
+    Footer básico sacado de https://flowbite.com con algunas modificaciones
+
+#   Por ultimo damos espacios aca sección con el fin de lograr que la pagina sea responsive
