@@ -48,7 +48,7 @@ const TAGS = {
   },
   MYSQL: {
     name: "MySQL",
-    class: "bg-white text-black",
+    class: "bg-white text-black border border-black",
     icon: MySQL
   },
   POSTMAN: {
@@ -127,7 +127,7 @@ const PROJECTS = [
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
       <article class="max-w-screen-md mx-auto">
-        <h3 class="text-2xl font-semibold text-yellow-200 mb-2">
+        <h3 class="text-2xl font-semibold mb-2 text-blue-500/100">
           {title}
         </h3>
         <p class="text-lg mb-4 text-pretty">{description}</p>
