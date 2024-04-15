@@ -10,6 +10,7 @@ import MySQL from "./icons/MySQLIcon.astro";
 import Postman from "./icons/Postman.astro";
 import PHP from "./icons/PHPIcon.astro";
 import CodeIgniter from "./icons/CodeIgniter.astro";
+import Laravel from "./icons/LaravelIcon.astro";
 
 import LinkButton from "./LinkButton.astro";
 
@@ -65,14 +66,26 @@ const TAGS = {
     name: "CodeIgniter",
     class: "bg-rose-900 text-white",
     icon: CodeIgniter
-  }
+  },
+  LARAVEL: {
+    name: "Laravel",
+    class:  "bg-black text-white",
+    icon: Laravel
+  },
 }
 const PROJECTS = [
+  {
+    title: "QuickMart... (Proximante)",
+    description: "Ecommerse de un supermercado desarrollándose con laravel, un proyecto final de talentos digitales.El sitio web contiene un login y register, sistema de compras con agregados al carrito y gestión de correo electrónico.",
+    github: "https://github.com/santvallejos/SupermercadoLaravel",
+    image: "./projects/QuickMart.jpg",
+    tags: [TAGS.LARAVEL, TAGS.CSS, TAGS.MYSQL],
+  },
   {
     title: "Premios Esland 2024",
     description:
       "Sitio Web de réplica y mejora sobre la página de los premios esland con fines de aprender y mejorar en la programación. Creado desde cero con:",
-    link: "https://eslandsantvallejos.vercel.app",
+    link: "https://eslandweb.netlify.app/",
     github: "https://github.com/santvallejos/Esland",
     image: "./projects/eslandWeb.webp",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIP ,TAGS.AstroIcon ,TAGS.TAILWIND],
