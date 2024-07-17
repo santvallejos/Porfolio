@@ -3,15 +3,16 @@ interface Props {
     Estudio: string;
     Institucion: string;
     fecha: string;
+    link: string;
 }
 
-const { Estudio, Institucion, fecha} = Astro.props;
+const { Estudio, Institucion, fecha, link} = Astro.props;
 
 import Badge from './Badge.astro';
 ---
 
     <li class="ml-5 text-blue-500">{Estudio}</li>
     <span class="italic dark:opacity-60 text-base block">
-    {Institucion} <Badge><a href="/648374a6db665d00026bd230.png" target="_blank">Certificado</a></Badge>
+    {Institucion} <Badge><a href={link} target="_blank">Certificado</a></Badge>
     <span class="block">{fecha}</span>
     </span>
