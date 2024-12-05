@@ -1,42 +1,60 @@
 ---
-  export const prerender = true;
+export const prerender = true;
 
-  import Layout from '../layouts/Layout.astro';
-  import Badge from '../components/Badge.astro';
-  import BadgeAnimation from '../components/BadgeAnimation.astro';
-  import SectionContainer from '../components/SectionContainer.astro'
-  import LinkedinIcon from '../components/icons/LinkedinIcon.astro';
-  import GithubIcon from '../components/icons/GithubIcon.astro';
-  import MailIcon from '../components/icons/MailIcon.astro';
-  import CV from '../components/icons/CVIcon.astro';
-  import LinkButton from '../components/LinkButton.astro';
-  import Technologie from '../components/Technologie.astro';
-  import Education from '../components/Education.astro';
-  import EducationLink from '../components/EducationLink.astro';
-  import CodeIcon from '../components/icons/Code.astro';
-  import Projects from '../components/Projects.astro';
-  import AboutMe from '../components/AboutMe.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import BadgeAnimation from "../components/BadgeAnimation.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import LinkedinIcon from "../components/icons/LinkedinIcon.astro";
+import GithubIcon from "../components/icons/GithubIcon.astro";
+import MailIcon from "../components/icons/MailIcon.astro";
+import CV from "../components/icons/CVIcon.astro";
+import LinkButton from "../components/LinkButton.astro";
+import Technologie from "../components/Technologie.astro";
+import Education from "../components/Education.astro";
+import EducationLink from "../components/EducationLink.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
 ---
 
-<Layout title="Portfolio de Satiago Vallejos - Desarrollador y Programador Web" description="Contrata a Santiago Vallejos para la creacion de tus apliaciones web. Programador Full Stack. Me epecializo en crear aplicaciones únicas.">
-
+<Layout
+  title="Portfolio de Satiago Vallejos - Desarrollador y Programador Web"
+  description="Contrata a Santiago Vallejos para la creacion de tus apliaciones web. Programador Full Stack. Me epecializo en crear aplicaciones únicas."
+>
   <!-- Presentacion del usuario -->
   <SectionContainer id="contacto" class="py-44 pb-24">
     <main class="px-3">
-      <img class="rounded-full size-20" src="../SantiagoPhotoColor.png" alt="Santiago photo">
-      
-      <h1 class="text-dark text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 dark:text-white"
-      >Hey, soy Santiago <a href="https://www.linkedin.com/in/santiago-vallejos-97a933236/" class="flex justify-center items-center"><BadgeAnimation>Disponible para trabajar</BadgeAnimation></a> </h1>
-      
-      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]"
-      > Soy <span class="text-yellow-500/90">Programador Full Stack</span>. <span class="text-sky-500/90">De Corrientes, Argentina🧉</span>. <br>
-      <span class="opacity-75"> Me especializo en crear aplicaciones únicas.</span>
+      <img
+        class="rounded-full size-20"
+        src="../SantiagoPhotoColor.png"
+        alt="Santiago photo"
+      />
+
+      <h1
+        class="text-dark text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 dark:text-white"
+      >
+        Hey, soy Santiago <a
+          href="https://www.linkedin.com/in/santiago-vallejos-97a933236/"
+          class="flex justify-center items-center"
+          ><BadgeAnimation>Disponible para trabajar</BadgeAnimation></a
+        >
+      </h1>
+
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        Soy <span class="text-yellow-500/90">Programador Full Stack</span>. <span
+          class="text-sky-500/90">De Corrientes, Argentina🧉</span
+        >. <br />
+        <span class="opacity-75">
+          Me especializo en crear aplicaciones únicas.</span
+        >
       </h2>
 
       <!-- Contactos -->
       <nav class="flex gap-4 mt-8 flex-wrap">
-
-        <LinkButton href="https://www.linkedin.com/in/santiago-vallejos-97a933236/">
+        <LinkButton
+          href="https://www.linkedin.com/in/santiago-vallejos-97a933236/"
+        >
           <LinkedinIcon class="size-4 md:size-6" />
           LinkedIn
         </LinkButton>
@@ -52,54 +70,70 @@
         </LinkButton>
       </nav>
       <nav class="flex gap-x-4 mt-4">
-        <LinkButton href="/SantiagoVallejosCV.pdf" download="SantiagoVallejosCV.pdf">
+        <LinkButton
+          href="/SantiagoVallejosCV.pdf"
+          download="SantiagoVallejosCV.pdf"
+        >
           <CV class="size-4 md:size-6" />
           Descargar CV
         </LinkButton>
-
       </nav>
-
     </main>
   </SectionContainer>
 
   <!-- Sobre mi -->
   <SectionContainer class="px-3 pb-2" id="sobre-mi">
-      <div class="flex flex-col gap-12 max-w-custom pt-20 pb-20">
-        <div class="flex flex-col gap-3">
-          <h2 class="text-4xl text-left">
-            Sobre mí
-          </h2>
-          <AboutMe />
-        </div>
+    <div class="flex flex-col gap-12 max-w-custom pt-20 pb-20">
+      <div class="flex flex-col gap-3">
+        <h2 class="text-4xl text-left">Sobre mí</h2>
+        <AboutMe />
+      </div>
 
-        <!-- Educacion -->
-        <div class="flex flex-col gap-3">
-          <h3 class="text-left text-2xl font-medium">
-            Educación:
-          </h3>
-          <ul class="marker:text-primary list-disc text-lg flex flex-wrap flex-row gap-5 lg:flex-col lg:gap-4">
-            <Education Estudio="Licenciatura en Sistemas de la Información" Institucion='Universidad nacional del nordeste (UNNE)' fecha='2022 - presente'/>
-            <EducationLink Estudio="Full stack" Institucion='Talentos Digitales - ' fecha='2023 - 2024' link="/CertificadoTalentosDigitales.png"/>
-            <EducationLink Estudio="Desarrollador Web" Institucion='CoderHouse - ' fecha='2023' link="/CertificadoCoderHouse.png"/>
-          </ul>
-        </div>
+      <!-- Educacion -->
+      <div class="flex flex-col gap-3">
+        <h3 class="text-left text-2xl font-medium">Educación:</h3>
+        <ul
+          class="marker:text-primary list-disc text-lg flex flex-col gap-4"
+        >
+          <Education
+            Estudio="Licenciatura en Sistemas de la Información"
+            Institucion="Universidad nacional del nordeste (UNNE)"
+            fecha="2022 - presente"
+          />
+          <Education
+            Estudio="Full Stack"
+            Institucion="Devlights"
+            fecha="2024 - 2024"
+          />
+          <EducationLink
+            Estudio="Full Stack"
+            Institucion="Talentos Digitales - "
+            fecha="2023 - 2024"
+            link="/CertificadoTalentosDigitales.png"
+          />
+          <EducationLink
+            Estudio="Desarrollador Web"
+            Institucion="CoderHouse - "
+            fecha="2023"
+            link="/CertificadoCoderHouse.png"
+          />
+        </ul>
+      </div>
 
-        <!-- Lista de tegnologias -->
-        <div class="flex flex-col gap-5">
-          <h3 class="text-left text-2xl font-medium">
-            Tecnologías:
-          </h3>
-          <div class="lg:w-[740px] mx-auto">
+      <!-- Lista de tegnologias -->
+      <div class="flex flex-col gap-5">
+        <h3 class="text-left text-2xl font-medium">Tecnologías:</h3>
+        <div class="lg:w-[740px] mx-auto">
           <ul class="flex flex-wrap gap-6">
             <Technologie Src="/icons/html-52732337.svg" Name="HTML" />
 
-            <Technologie Src='/icons/css-8e01670c.svg' Name='CSS' />
+            <Technologie Src="/icons/css-8e01670c.svg" Name="CSS" />
 
             <Technologie Src="/icons/sass-svgrepo-com.svg" Name="Sass" />
 
-            <Technologie Src="/icons/tailwind-2a43431b.svg" Name="Tailwind"' />
+            <Technologie Src="/icons/tailwind-2a43431b.svg" Name="Tailwind" ' />
 
-            <Technologie  Src="/icons/astro-svgrepo-com.svg" Name="Astro" />
+            <Technologie Src="/icons/astro-svgrepo-com.svg" Name="Astro" />
 
             <Technologie Src="/icons/react-9fe43511.svg" Name="React" />
 
@@ -107,9 +141,12 @@
 
             <Technologie Src="/icons/codeigniter.svg" Name="Codeigniter" />
 
-            <Technologie Src="/icons/laravel-svgrepo-com.svg" Name="Laravel" />            
+            <Technologie Src="/icons/laravel-svgrepo-com.svg" Name="Laravel" />
 
-            <Technologie Src="/icons/javascript-0ac5e3cc.svg" Name="JavaScript" />
+            <Technologie
+              Src="/icons/javascript-0ac5e3cc.svg"
+              Name="JavaScript"
+            />
 
             <Technologie Src="/icons/php3-svgrepo-com.svg" Name="PHP" />
 
@@ -130,10 +167,9 @@
             <Technologie Src="/icons/trello.svg" Name="Trello" />
           </ul>
         </div>
-        </div>
-  
       </div>
-    </SectionContainer>
+    </div>
+  </SectionContainer>
 
   <SectionContainer class="px-3 pb-20" id="proyectos">
     <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
@@ -141,5 +177,5 @@
       Proyectos
     </h2>
     <Projects />
-  </SectionConteiner>
+  </SectionContainer>
 </Layout>
