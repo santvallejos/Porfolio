@@ -123,49 +123,81 @@ import AboutMe from "../components/AboutMe.astro";
       <!-- Lista de tegnologias -->
       <div class="flex flex-col gap-5">
         <h3 class="text-left text-2xl font-medium">Tecnologías:</h3>
-        <div class="lg:w-[740px] mx-auto">
+        <div class="lg:w-[740px] mx-auto flex flex-col gap-7">
+
+          <div>
+          <h4 class="text-left font-semibold pb-2">Frontend</h4>
           <ul class="flex flex-wrap gap-6">
             <Technologie Src="/icons/html-52732337.svg" Name="HTML" />
 
             <Technologie Src="/icons/css-8e01670c.svg" Name="CSS" />
 
-            <Technologie Src="/icons/sass-svgrepo-com.svg" Name="Sass" />
+            <Technologie
+            Src="/icons/javascript-0ac5e3cc.svg"
+            Name="JavaScript"/>
+
+            <Technologie
+            Src="/icons/typescript-icon-svgrepo-com.svg"
+            Name="Typescript"/>
 
             <Technologie Src="/icons/tailwind-2a43431b.svg" Name="Tailwind" ' />
 
             <Technologie Src="/icons/astro-svgrepo-com.svg" Name="Astro" />
 
+            <Technologie Src="/icons/angular-svgrepo-com.svg" Name="Angular" />
+
             <Technologie Src="/icons/react-9fe43511.svg" Name="React" />
 
             <Technologie Src="/icons/vuejs.svg" Name="VueJs" />
+          </ul>
+        </div>
 
-            <Technologie Src="/icons/codeigniter.svg" Name="Codeigniter" />
+        <div>
+          <h4 class="text-left font-semibold pb-2">Backend</h4>
+          <ul class="flex flex-wrap gap-6">
+            <Technologie Src="/icons/c-1.svg" Name="C" />
+            
+            <Technologie Src="/icons/c.svg" Name="C++" />
+            
+            <Technologie Src="/icons/csharp.svg" Name="C#"/>
+
+            <Technologie Src="/icons/dotnet-svgrepo-com.svg" Name=".Net" />
+            
+            <Technologie Src="/icons/php3-svgrepo-com.svg" Name="PHP" />
 
             <Technologie Src="/icons/laravel-svgrepo-com.svg" Name="Laravel" />
 
-            <Technologie
-              Src="/icons/javascript-0ac5e3cc.svg"
-              Name="JavaScript"
-            />
+            <Technologie Src="/icons/nodejs-icon-svgrepo-com.svg" Name="NodeJS" />
+          </ul>
+        </div>
 
-            <Technologie Src="/icons/php3-svgrepo-com.svg" Name="PHP" />
-
-            <Technologie Src="/icons/c-1.svg" Name="C" />
-
-            <Technologie Src="/icons/c.svg" Name="C++" />
-
+        <div>
+          <h4 class="text-left font-semibold pb-2">Base de datos</h4>
+          <ul class="flex flex-wrap gap-6">
             <Technologie Src="/icons/mysql-logo-svgrepo-com.svg" Name="MySQL" />
 
+            <Technologie Src="/icons/sql-svgrepo-com.svg" Name="SQL" />
+
+            <Technologie Src="/icons/mongo-svgrepo-com.svg" Name="MongoDB" />
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-left font-semibold pb-2">Herramientas</h4>
+          <ul class="flex flex-wrap gap-6">
             <Technologie Src="/icons/git-3f0b1bae.svg" Name="Git" />
 
-            <Technologie Src="/icons/docker-svgrepo-com.svg" Name="Docker" />
-
             <Technologie Src="/icons/Github.svg" Name="Github" />
+
+            <Technologie Src="/icons/postman-icon-svgrepo-com.svg" Name="Postman" />
+
+            <Technologie Src="/icons/docker-svgrepo-com.svg" Name="Docker" />
 
             <Technologie Src="/icons/jira-svgrepo-com.svg" Name="Jira" />
 
             <Technologie Src="/icons/trello.svg" Name="Trello" />
           </ul>
+        </div>
         </div>
       </div>
     </div>
