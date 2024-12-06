@@ -11,6 +11,11 @@ import Postman from "./icons/Postman.astro";
 import PHP from "./icons/PHPIcon.astro";
 import CodeIgniter from "./icons/CodeIgniter.astro";
 import Laravel from "./icons/LaravelIcon.astro";
+import React from "./icons/ReactJSIcon.astro";
+import NodeJS from "./icons/NodeJSIcon.astro";
+import VueJS from "./icons/VueJSIcon.astro";
+import Angular from "./icons/AngularIcon.astro";
+import Browser from "./icons/BrowserIcon.astro";
 
 import LinkButton from "./LinkButton.astro";
 
@@ -72,31 +77,50 @@ const TAGS = {
     class:  "bg-black text-white",
     icon: Laravel
   },
+  NODEJS: {
+    name: "NodeJS",
+    class: "bg-white text-black",
+    icon: NodeJS
+  },
+  REACTJS: {
+    name: "ReactJS",
+    class: "bg-[#16181d] text-white",
+    icon: React
+  },
+  VUEJS: {
+    name: "VueJS",
+    class: "bg-[#abcebe] text-black",
+    icon: VueJS
+  },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#e6d4f7] text-black",
+    icon: Angular
+  }
 }
 const PROJECTS = [
   {
-    title: "QuickMart... (Proximante)",
-    description: "Ecommerse de un supermercado desarrollándose con laravel, un proyecto final de talentos digitales trabajado con un grupo. El sitio web contiene un login y register, sistema de compras con agregados al carrito y gestión de correo electrónico.",
+    title: "QuickMart",
+    description: "E-commerse de un supermercado que permite crear un usuario, registrarse, obtener una lista de productos para agregar al carrito y en el mismo administrar la cantidad, eliminar o realizar la compra.",
     github: "https://github.com/santvallejos/SupermercadoLaravel",
     image: "./projects/QuickMart.jpg",
-    tags: [TAGS.LARAVEL, TAGS.CSS, TAGS.MYSQL],
+    tags: [TAGS.LARAVEL, TAGS.VUEJS, TAGS.CSS, TAGS.MYSQL],
   },
   {
-    title: "Premios Esland 2024",
+    title: "VirtualTome",
     description:
-      "Sitio Web de réplica y mejora sobre la página de los premios esland con fines de aprender y mejorar en la programación. Creado desde cero con:",
-    link: "https://eslandweb.netlify.app/",
-    github: "https://github.com/santvallejos/Esland",
-    image: "./projects/eslandWeb.webp",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIP ,TAGS.AstroIcon ,TAGS.TAILWIND],
+      "Este proyecto es una biblioteca virtual donde puedes administrar una lista de libros, estos poseen: nombre, autor, categoría, url de imagen, fecha de publicación y su isbn. Cumple las funciones básicas de un CRUD que son:Listar, añadir, actualizar y eliminar un libro.",
+    githubBackend: "https://github.com/santvallejos/VirtualTome-Backend",
+    githubFrontend: "https://github.com/santvallejos/VirtualTome-Frontend",
+    image: './projects/VirtualTomeShots.png',
+    tags: [TAGS.NODEJS, TAGS.REACTJS, TAGS.MYSQL, TAGS.POSTMAN],
   },
   {
-    title: "Rest-Api Librería",
-    description:
-      "Una api creada en el programa de Talentos Digitales, este proyecto tiene el fin de simular una librería donde se pueden agregar libros por su Nombre, Autor, categoría, año de publicación y su ISBN. Se puede mostrar, agregar, consultar, eliminar y actualizar libros. Fue creado desde cero con:",
-    github: "https://github.com/santvallejos/rest-api",
-    image: './projects/rest-api Libreria.webp',
-    tags: [TAGS.JAVASCRIP, TAGS.MYSQL, TAGS.POSTMAN],
+    title: "To-Dolist",
+    description: "Un gestor de tareas, donde se puede agregar, marcar cuando están finalizadas y eliminarlas.",
+    github: "https://github.com/santvallejos/To-doList",
+    image: "./projects/To-DolistShots.png",
+    tags: [TAGS.ANGULAR],
   },
   {
     title: "Calculadora Web",
@@ -114,31 +138,13 @@ const PROJECTS = [
     github: "https://github.com/santvallejos/LoginRegisterTalentosDigitales",
     image: "./projects/proyectoTalentosDigitales.webp",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIP, TAGS.CODEIGNITER ,TAGS.PHP, TAGS.MYSQL],
-  },
-  {
-    title: "Página de contacto",
-    description:
-      "Formulario desarrollado para lograr un aspecto visual atractivo.  Creado desde cero con:",
-    link: "https://santvallejos.github.io/paginaDeContacto/",
-    github: "https://github.com/santvallejos/paginaDeContacto",
-    image: "./projects/paginaContacto.webp",
-    tags: [TAGS.HTML, TAGS.CSS],
-  },
-  {
-    title: "Página de testimonios",
-    description:
-      "Criticas y calificación de usuario hacia una página, este proyecto tiene el fin de implementar y practicar aspectos visuales con SASS.  Creado desde cero con:",
-    link: "https://santvallejos.github.io/paginaDeTestimonios/",
-    github: "https://github.com/santvallejos/paginaDeTestimonios",
-    image: "./projects/paginaTestimonios.webp",
-    tags: [TAGS.HTML, TAGS.CSS, TAGS.SASS],
   }
 ]
 ---
 
 <section class="container mx-auto flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, github, githubBackend, githubFrontend}) => (
       <article class="max-w-screen-md mx-auto">
         <h3 class="text-2xl font-semibold mb-2 text-blue-500/100">
           {title}
@@ -163,37 +169,27 @@ const PROJECTS = [
           alt={`Captura de pantalla del proyecto ${image}`}
         />
         <footer class="flex gap-x-4 items-end justify-start mt-4">
-  {github && (
-    <LinkButton href={github}>
-      <GitHub class="size-6" />
-      Ver código fuente
-    </LinkButton>
-  )}
-  {link && (
-    <LinkButton href={link}>
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-              <>
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M19.5 7a9 9 0 0 0 -7.5 -4a8.991 8.991 0 0 0 -7.484 4" />
-                <path d="M11.5 3a16.989 16.989 0 0 0 -1.826 4" />
-                <path d="M12.5 3a16.989 16.989 0 0 1 1.828 4" />
-                <path d="M19.5 17a9 9 0 0 1 -7.5 4a8.991 8.991 0 0 1 -7.484 -4" />
-                <path d="M11.5 21a16.989 16.989 0 0 1 -1.826 -4" />
-                <path d="M12.5 21a16.989 16.989 0 0 0 1.828 -4" />
-                <path d="M2 10l1 4l1.5 -4l1.5 4l1 -4" />
-                <path d="M17 10l1 4l1.5 -4l1.5 4l1 -4" />
-                <path d="M9.5 10l1 4l1.5 -4l1.5 4l1 -4" />
-              </>
-            </svg>
+          {github && (
+            <LinkButton href={github}>
+              <GitHub class="size-6" />
+              Ver código fuente
+            </LinkButton>
+          )}
+          {githubBackend &&(
+              <LinkButton href={githubBackend}>
+              <GitHub class="size-6" />
+              Ver código Backend
+            </LinkButton>
+          )}
+          {githubFrontend &&(
+              <LinkButton href={githubFrontend}>
+              <GitHub class="size-6" />
+              Ver código Frontend
+            </LinkButton>
+          )}
+          {link && (
+            <LinkButton href={link}>
+              <Browser class="size-6"/>
             Ir al sitio web
           </LinkButton>
           )}
