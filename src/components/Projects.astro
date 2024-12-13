@@ -79,7 +79,7 @@ const TAGS = {
   },
   NODEJS: {
     name: "NodeJS",
-    class: "bg-white text-black",
+    class: "bg-white text-black border border-black",
     icon: NodeJS
   },
   REACTJS: {
@@ -112,7 +112,7 @@ const PROJECTS = [
       "Este proyecto es una biblioteca virtual donde puedes administrar una lista de libros, estos poseen: nombre, autor, categoría, url de imagen, fecha de publicación y su isbn. Cumple las funciones básicas de un CRUD que son:Listar, añadir, actualizar y eliminar un libro.",
     githubBackend: "https://github.com/santvallejos/VirtualTome-Backend",
     githubFrontend: "https://github.com/santvallejos/VirtualTome-Frontend",
-    image: './projects/VirtualTomeShots.png',
+    video: './projects/VirtualTome 1.0.mp4',
     tags: [TAGS.NODEJS, TAGS.REACTJS, TAGS.MYSQL, TAGS.POSTMAN],
   },
   {
@@ -144,7 +144,7 @@ const PROJECTS = [
 
 <section class="container mx-auto flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github, githubBackend, githubFrontend}) => (
+    PROJECTS.map(({ image, video, title, description, tags, link, github, githubBackend, githubFrontend}) => (
       <article class="max-w-screen-md mx-auto">
         <h3 class="text-2xl font-semibold mb-2 text-blue-500/100">
           {title}
@@ -162,12 +162,17 @@ const PROJECTS = [
             </li>
           ))}
         </ul>
-        <img
+        {video && (
+          <video controls loop src={video} class="rounded shadow-2xl shadow-white/10 w-full"/>
+        )}
+        {image &&(
+          <img
           loading="lazy"
           class="rounded shadow-2xl shadow-white/10 w-full"
           src={image}
           alt={`Captura de pantalla del proyecto ${image}`}
         />
+        )}
         <footer class="flex gap-x-4 items-end justify-start mt-4">
           {github && (
             <LinkButton href={github}>
