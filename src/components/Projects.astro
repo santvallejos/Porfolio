@@ -16,8 +16,12 @@ import NodeJS from "./icons/NodeJSIcon.astro";
 import VueJS from "./icons/VueJSIcon.astro";
 import Angular from "./icons/AngularIcon.astro";
 import Browser from "./icons/BrowserIcon.astro";
+import DotnetIcon from "./icons/DotnetIcon.astro";
+import SQLIcon from "./icons/SQLIcon.astro";
+import BootstrapIcon from "./icons/BootstrapIcon.astro";
 
 import LinkButton from "./LinkButton.astro";
+import TrelloIcon from "./icons/TrelloIcon.astro";
 
 
 const TAGS = {
@@ -96,9 +100,33 @@ const TAGS = {
     name: "Angular",
     class: "bg-[#e6d4f7] text-black",
     icon: Angular
+  },
+  DOTNET: {
+    name: ".NET",
+    class: "bg-[#B96EFF] tex-white",
+    icon: DotnetIcon
+  },
+  SQLSERVER: {
+    name: "MS SQL Server",
+    class: "bg-[#909090] tex-white",
+    icon: SQLIcon
+  },
+  BOOTSTRAP: {
+    name: "Laravel",
+    class:  "bg-white text-black border border-black",
+    icon: BootstrapIcon
   }
 }
 const PROJECTS = [
+  {
+    title: "Calendar Of Events",
+    description: "Permite administrar eventos o recordatorios dentro de un calendario, tiene la función de mostrar, crear, actualizar y eliminar eventos de forma sencilla que a su vez a través de SignalR nos avisa cuando un evento ha iniciado.",
+    githubBackend: "https://github.com/santvallejos/CalendarOfEvents-Backend/tree/develop",
+    githubFrontend: "https://github.com/santvallejos/CalendarOfEvents-Frontend/tree/develop",
+    video: './projects/CalendarOfEvents.mp4',
+    trello: "https://trello.com/b/CxGys3Ed/calendarofevents",
+    tags: [TAGS.DOTNET, TAGS.ANGULAR, TAGS.SQLSERVER, TAGS.BOOTSTRAP],
+  },
   {
     title: "QuickMart",
     description: "E-commerse de un supermercado que permite crear un usuario, registrarse, obtener una lista de productos para agregar al carrito y en el mismo administrar la cantidad, eliminar o realizar la compra.",
@@ -144,7 +172,7 @@ const PROJECTS = [
 
 <section class="container mx-auto flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, video, title, description, tags, link, github, githubBackend, githubFrontend}) => (
+    PROJECTS.map(({ image, video, title, description, tags, link, github, githubBackend, githubFrontend, trello}) => (
       <article class="max-w-screen-md mx-auto">
         <h3 class="text-2xl font-semibold mb-2 text-blue-500/100">
           {title}
@@ -173,7 +201,7 @@ const PROJECTS = [
           alt={`Captura de pantalla del proyecto ${image}`}
         />
         )}
-        <footer class="flex gap-x-4 items-end justify-start mt-4">
+        <div class="flex gap-x-4 items-end justify-start mt-4">
           {github && (
             <LinkButton href={github}>
               <GitHub class="size-6" />
@@ -198,7 +226,15 @@ const PROJECTS = [
             Ir al sitio web
           </LinkButton>
           )}
-        </footer> 
+        </div> 
+        <div class="flex gap-x-4 items-end justify-start mt-4">
+          {trello && (
+            <LinkButton href={trello}>
+              <TrelloIcon class="size-6"/>
+            Ir al sitio web
+          </LinkButton>
+          )}
+        </div>
       </article>
     ))
   }
